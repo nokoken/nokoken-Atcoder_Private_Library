@@ -3,6 +3,27 @@
 #include <vector>
 #include <cmath>
 typedef long long ll;
+using Graph = std::vector<std::vector<ll>>;
+
+// 任意のグラフ内の要素を展開して表示する関数
+void graph_show(Graph g, ll N)
+{
+    N++;
+    for (ll i = 1; i < N; i++)
+    {
+        std::cout << '{';
+        for (ll &v : g[i])
+        {
+            if (g[i][g[i].size() - 1] == v)
+            {
+                std::cout << v;
+                break;
+            }
+            std::cout << v << ',';
+        }
+        std::cout << '}' << std::endl;
+    }
+}
 
 // long long型の累乗をしたい時に使う関数
 ll ll_pow(ll x, ll a)
