@@ -6,7 +6,7 @@
 #include <vector>
 #include <cmath>
 
-typedef long long ll;
+using ll = long long;
 using Graph = std::vector<std::vector<ll>>;
 
 // 任意のグラフ内の要素を展開して表示する関数
