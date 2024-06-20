@@ -1,7 +1,11 @@
+#ifndef _Atcoder_Private_Library_HPP_
+#define _Atcoder_Private_Library_HPP_
+
 #include <iostream>
 #include <string>
 #include <vector>
 #include <cmath>
+
 typedef long long ll;
 using Graph = std::vector<std::vector<ll>>;
 
@@ -12,7 +16,7 @@ void graph_show(Graph g, ll N)
     for (ll i = 1; i < N; i++)
     {
         std::cout << '{';
-        for (ll &v : g[i])
+        for (ll& v : g[i])
         {
             if (g[i][g[i].size() - 1] == v)
             {
@@ -82,7 +86,7 @@ std::vector<ll> S_O_E(ll x)
                 tmp[j - 1] = 0;
         }
     }
-    for (ll &v : tmp)
+    for (ll& v : tmp)
     {
         if (v != 0)
         {
@@ -93,3 +97,5 @@ std::vector<ll> S_O_E(ll x)
     ans.resize(ans_size);
     return ans;
 }
+
+#endif
